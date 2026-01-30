@@ -1,2 +1,6 @@
-# python
-practice python projects
+# Code Logic
+The encryptor reverses the order of the words in the input, it then proceeds to reverse the order of the letters in each word, and then those letters are converted to ASCII Values which are also reversed, and the output is given in a list format.
+
+The decryptor first strips all the brackets and spaces from either side of the input. Since there are still "]"s left after every value, it can be used as a separator (so the computer treats it like a whitespace), thus converting the stripped string to a list with the encrypted words. 
+Now the objects in the list are the encrypted "words". This means the reversed ASCII values of a word are treated as a singular object. 
+For example, if there is a list: ['401 511 011 79 121 811 501 86', ' 901 79', ' 37']. Then "901 79" is a word in the sentence and the 2 different reversed ASCII values in it are treated as one object. So, we treat the whitespace as a separator and convert it into a list treating "901" and "79" as 2 different values. We then iterate through it reversing the ASCII Values and then convert them to integers (and if you're wondering; yes, they were string values all this time). We then convert the ASCII values to letters, reverse the order of the letters, then the order of the words, and then the encrypted message is decrypted!
